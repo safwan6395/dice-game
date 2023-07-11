@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="player-1-box active">
+        <h2 class="player-1 winner-playe">player 1</h2>
+        <p class="player-1__score">0</p>
+        <div class="current-score-box-1">
+          <p class="current-1">current</p>
+          <p class="current-score-1">0</p>
+        </div>
+      </div>
+      <div class="btns-box">
+        <button class="btn new-game-btn"><span>🔚</span> New game</button>
+        <div class="dice">
+          <div class="dice dice-1 hide">
+            <img src="https://pig-game-v2.netlify.app/dice-1.png" alt="1">
+          </div>
+          <div class="dice dice-2 hide">
+            <img src="https://pig-game-v2.netlify.app/dice-2.png" alt="2">
+          </div>
+          <div class="dice dice-3 hide">
+            <img src="https://pig-game-v2.netlify.app/dice-3.png" alt="3">
+          </div>
+          <div class="dice dice-4 hide">
+            <img src="https://pig-game-v2.netlify.app/dice-4.png" alt="4">
+          </div>
+          <div class="dice dice-5 hide">
+            <img src="https://pig-game-v2.netlify.app/dice-5.png" alt="5">
+          </div>
+          <div class="dice dice-6 hide">
+            <img src="https://pig-game-v2.netlify.app/dice-6.png" alt="6">
+          </div>
+          <!-- <div class="dice-num dice-2"></div>
+          <div class="dice-num dice-3"></div>
+          <div class="dice-num dice-4"></div>
+          <div class="dice-num dice-5"></div>
+          <div class="dice-num dice-6"></div> -->
+        </div>
+        <button class="btn roll-dice-btn"><span>🎲</span> Roll Dice</button>
+        <button class="btn hold-btn"><span>📥</span> Hold</button>
+      </div>
+      <div class="player-2-box">
+        <h2 class="player-2">player 2</h2>
+        <p class="player-2__score">0</p>
+        <div class="current-score-box-2">
+          <p class="current-2">current</p>
+          <p class="current-score-2">0</p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
