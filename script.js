@@ -9,6 +9,9 @@ const player2Box = document.querySelector(".player-2-box");
 const player2 = document.querySelector(".player-2");
 const player2ScoreDOM = document.querySelector(".player-2__score");
 const player2TempScoreDOM = document.querySelector(".current-score-2");
+const holdBtn = document.querySelector(".hold-btn");
+const rollDiceBtn = document.querySelector(".roll-dice-btn");
+const newGameBtn = document.querySelector(".new-game-btn");
 
 let player1Score = 0;
 let player1TempScore = 0;
@@ -16,9 +19,7 @@ let player1TempScore = 0;
 let player2Score = 0;
 let player2TempScore = 0;
 
-const rollDiceBtn = document.querySelector(".roll-dice-btn");
-
-rollDiceBtn.addEventListener("click", function () {
+const rollDice = function () {
   if (player1Score <= 99 && player2Score <= 99) {
     if (player1Box.classList.contains("active")) {
       const randomScore = Math.trunc(Math.random() * 6 + 1);
@@ -60,11 +61,9 @@ rollDiceBtn.addEventListener("click", function () {
       player2TempScoreDOM.textContent = player2TempScore;
     }
   }
-});
+};
 
-const holdBtn = document.querySelector(".hold-btn");
-
-holdBtn.addEventListener("click", function () {
+const holdScore = function () {
   if (player1TempScore > 0 || player2TempScore > 0) {
     if (player1Box.classList.contains("active")) {
       player1Score += player1TempScore;
@@ -90,11 +89,9 @@ holdBtn.addEventListener("click", function () {
       player2.classList.add("winner-player");
     }
   }
-});
+};
 
-const newGameBtn = document.querySelector(".new-game-btn");
-
-newGameBtn.addEventListener("click", function () {
+const newGame = function () {
   player1Score = 0;
   player1TempScore = 0;
 
@@ -115,4 +112,10 @@ newGameBtn.addEventListener("click", function () {
   player1.classList.remove("winner-player");
   player2Box.classList.remove("winner");
   player2.classList.remove("winner-player");
-});
+};
+
+rollDiceBtn.addEventListener("click", rollDice);
+
+holdBtn.addEventListener("click", holdScore);
+
+newGameBtn.addEventListener("click", newGame);
